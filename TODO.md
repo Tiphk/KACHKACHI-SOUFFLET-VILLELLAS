@@ -8,9 +8,13 @@ We would need at least 5 containers:
 # Nb de containers :  
 
 Frontend container
-Backend microservice 1 container with its isolated database
+
+Backend microservice 1 container with its isolated database 
+
 Backend microservice 2 container with its isolated database
+
 Database container for backend microservice 1 : database sur les users
+
 Database container for backend microservice 2 : database sur les acteurs
 
 
