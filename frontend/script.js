@@ -3,6 +3,23 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 document.getElementById("callApiButton").addEventListener("click", function() {
+
+    fetch('http://localhost:8080/getInsert')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(data); // Afficher les données récupérées dans la console
+        // Vous pouvez faire d'autres opérations avec les données ici
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+
+/*
     fetch('http://localhost:8080/api/insert', {
         method: 'POST', // Méthode de la requête
         headers: {
@@ -32,4 +49,5 @@ document.getElementById("callApiButton").addEventListener("click", function() {
         console.error('Erreur:', error); // Afficher les erreurs dans la console
         alert('Erreur lors de l\'appel de l\'API !'); // Afficher une alerte en cas d'erreur
     });
+    */
 });
