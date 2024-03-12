@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  consumer:
+    build:
+      context: ./consumer
+      dockerfile: Dockerfile
+    container_name: consumer
+    # Add any other configurations for the consumer service if needed
+
+  producer:
+    build:
+      context: ./producer
+      dockerfile: Dockerfile
+    container_name: producer
+    # Add any other configurations for the producer service if needed
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - consumer
+      - producer
+    container_name: nginx
+
+  redis:
+    image: redis:alpine
+    container_name: redis
