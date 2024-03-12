@@ -6,6 +6,6 @@ COPY api_users.py .
 
 EXPOSE 8080
 
-RUN pip install flask psycopg2-binary
+RUN pip install flask psycopg2-binary flask-cors
 RUN apt-get update && apt-get install -y postgresql postgresql-client
 CMD ["python", "api_users.py"]
