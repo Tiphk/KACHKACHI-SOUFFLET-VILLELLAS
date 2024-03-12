@@ -25,3 +25,10 @@ front : nginx
   
 sur le front on affiche 2 images de personnes grisées
 proportionnellement à leur tailles (par rapport aux infos des databases)
+
+VISUEL DES FUTURS DOSSIERS
+
+- docker.compose à la root 
+- dossier front - dockerfile + html +
+- dossier database user - dockerfile.db dockerfile.app codePython.api users.sql
+- dossier database acteurs - dockerfile.db dockerfile.app codePython.api acteurs.sql
