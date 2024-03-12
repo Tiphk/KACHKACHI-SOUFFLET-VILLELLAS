@@ -1,0 +1,7 @@
+FROM postgres:14
+ENV POSTGRES_USER ADMIN
+ENV POSTGRES_PASSWORD ADMIN
+ENV POSTGRES_DB DB_USERS
+ENV PGDATA /data
+COPY init.sql /docker-entrypoint-initdb.d/init.sql
+EXPOSE 5432

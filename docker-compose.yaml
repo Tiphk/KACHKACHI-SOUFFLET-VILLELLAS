@@ -1,31 +1,16 @@
 version: '3.8'
 
 services:
-  consumer:
+  db_users:
     build:
-      context: ./consumer
-      dockerfile: Dockerfile
-    container_name: consumer
+      context: ./backend/users
+      dockerfile: dockerfile.db
+    container_name: db_users
     # Add any other configurations for the consumer service if needed
 
-  producer:
+  app_users:
     build:
-      context: ./producer
-      dockerfile: Dockerfile
-    container_name: producer
-    # Add any other configurations for the producer service if needed
+      context: ./backend/users
+      dockerfile: dockerfile.app
+    container_name: app_users
 
-  nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile
-    ports:
-      - "8080:80"
-    depends_on:
-      - consumer
-      - producer
-    container_name: nginx
-
-  redis:
-    image: redis:alpine
-    container_name: redis
