@@ -32,3 +32,5 @@ VISUEL DES FUTURS DOSSIERS
 - dossier front - dockerfile + html + javascript (nginx ?)
 - dossier database user - dockerfile.db dockerfile.app codePython.api users.sql
 - dossier database acteurs - dockerfile.db dockerfile.app codePython.api acteurs.sql
+
+À faire : installer cors sur python + le mettre dans le dockerfile.app 
