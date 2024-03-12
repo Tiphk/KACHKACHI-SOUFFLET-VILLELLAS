@@ -33,4 +33,9 @@ VISUEL DES FUTURS DOSSIERS
 - dossier database user - dockerfile.db dockerfile.app codePython.api users.sql
 - dossier database acteurs - dockerfile.db dockerfile.app codePython.api acteurs.sql
 
-À faire : installer cors sur python + le mettre dans le dockerfile.app 
+# À faire : 
+
+Mettre un volume sur notre database user (et actors)
+Faire la database actors et les containers qui vont avec + requetes api blabla
+Faire le front
+
