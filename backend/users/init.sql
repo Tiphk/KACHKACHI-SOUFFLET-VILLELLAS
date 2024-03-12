@@ -5,7 +5,7 @@ CREATE TABLE users (
     height INTEGER NOT NULL,
 );
 
-INSERT INTO users (username, password) VALUES
+INSERT INTO users (username, password, height) VALUES
 ('admin', 'admin', 180),
 ('user1', 'password', 170),
 ('user2', 'anotherpassword', 160),
