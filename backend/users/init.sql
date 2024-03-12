@@ -2,7 +2,7 @@ CREATE TABLE users (
     id serial PRIMARY KEY,
     username VARCHAR ( 20 ) UNIQUE NOT NULL,
     password VARCHAR ( 50 ) NOT NULL,
-    height INTEGER NOT NULL,
+    height INTEGER NOT NULL
 );
 
 INSERT INTO users (username, password, height) VALUES
