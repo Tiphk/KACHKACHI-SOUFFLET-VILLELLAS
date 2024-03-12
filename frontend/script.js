@@ -3,7 +3,6 @@ document.getElementById("button").addEventListener("click", function() {
 });
 
 document.getElementById("callApiButton").addEventListener("click", function() {
-
     fetch('http://localhost:8080/getInsert')
       .then(response => {
         if (!response.ok) {
@@ -18,27 +17,23 @@ document.getElementById("callApiButton").addEventListener("click", function() {
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
       });
+});
 
-/*
+document.getElementById("callApiPOST").addEventListener("click", function() {
     fetch('http://localhost:8080/api/insert', {
         method: 'POST', // Méthode de la requête
         headers: {
             'Content-Type': 'application/json' // Type de contenu de la requête
             // Vous pouvez ajouter d'autres en-têtes selon les besoins
         },
-        // Corps de la requête (si nécessaire)
-        body: JSON.stringify({
-            // Les données à envoyer à l'API
-            // Par exemple, si l'API attend un objet JSON
-            key1: 'value1',
-            key2: 'value2'
-        })
+        // Corps de la requête (vide dans ce cas)
+        body: JSON.stringify({})
     })
     .then(response => {
         if (!response.ok) {
             throw new Error('Erreur lors de la requête');
         }
-        return response.json(); // Récupérer la réponse JSON de l'API
+        return response.text(); // Récupérer la réponse de l'API comme texte
     })
     .then(data => {
         console.log(data); // Afficher la réponse de l'API dans la console
@@ -49,5 +44,4 @@ document.getElementById("callApiButton").addEventListener("click", function() {
         console.error('Erreur:', error); // Afficher les erreurs dans la console
         alert('Erreur lors de l\'appel de l\'API !'); // Afficher une alerte en cas d'erreur
     });
-    */
 });
