@@ -28,7 +28,7 @@ proportionnellement à leur tailles (par rapport aux infos des databases)
 
 VISUEL DES FUTURS DOSSIERS
 
-- docker.compose à la root 
-- dossier front - dockerfile + html +
+- docker-compose.yml à la root 
+- dossier front - dockerfile + html + javascript (nginx ?)
 - dossier database user - dockerfile.db dockerfile.app codePython.api users.sql
 - dossier database acteurs - dockerfile.db dockerfile.app codePython.api acteurs.sql
